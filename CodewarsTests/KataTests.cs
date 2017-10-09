@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Codewars;
 using NUnit.Framework;
 
-namespace Codewars
+namespace CodewarsTests
 {
     [TestFixture]
-    public class KataTests
+    public partial class KataTests
     {
         [Test]
         public void BasicTests()

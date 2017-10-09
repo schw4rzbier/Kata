@@ -5,54 +5,8 @@ using System.Text;
 
 namespace Codewars
 {
-    public static class Kata
+    public static partial class Kata
     {
-        public static string CamelCase(this string str)
-        {
-            if (String.IsNullOrWhiteSpace(str)) return "";
-
-            var tstr = str.Trim();
-            
-            var words = tstr.Split(' ');
-            var rtnStr = "";
-            foreach (var word in words)
-            {
-                var tmp = word.ToList();
-                tmp[0] = Char.ToUpper(tmp[0]);
-                rtnStr += string.Concat(tmp);
-            }
-            return rtnStr;
-        }
-
-        public static int[] ArrayDiff(int[] a, int[] b)
-        {
-            //return a.Except(b).ToArray();
-            return a.Where(x => !b.Contains(x)).ToArray();
-        }
-
-        public static bool Narcissistic(int value)
-        {
-            var digits = value.ToDigitList();
-            var pow = digits.Count;
-            return digits.Sum(d => (int)(Math.Pow(d, pow))) == value;
-        }
-
-        public static bool IsPrime(int n)
-        {
-            if (n <= 1) return false;
-            else if (n <= 3) return true;
-            else if (n % 2 == 0 || n % 3 == 0) return false;
-
-            int counter = 5;
-            while (counter * counter <= n)
-            {
-                if (n % counter == 0 || n % (counter + 2) == 0) return false;
-                counter+=6;
-            }
-            return true;
-        }
-
-
         public static string CreatePhoneNumber(int[] numbers)
         {
             string pNum = "";
