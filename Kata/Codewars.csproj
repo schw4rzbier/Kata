@@ -50,6 +50,7 @@
     <Compile Include="Kata.cs" />
     <Compile Include="Narcissistic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToSmallest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
